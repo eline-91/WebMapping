@@ -48,7 +48,6 @@ def make_shp(locationList, fileName):
     for city_loc in locationList:
         city = city_loc[0]
         coords = city_loc[1]
-        print coords
         # Create point
         geometry = osgeo.ogr.Geometry(osgeo.ogr.wkbPoint)
         geometry.SetPoint(0, coords[1], coords[0])
@@ -76,4 +75,12 @@ for city in list_cities:
     location_list.append([city,location])
 
 shp_filename = '/home/eline/Documents/Python/Projects/Web_Mapping/WebMapping/Shapefiles/CityLocation_' + time.strftime('%Y%m%d_%H%M') + '.shp'
-make_shp(location_list, shp_filename)
+
+try:
+    make_shp(location_list, shp_filename)
+except AttributeError:
+    print "Error: shapefile filename already exists."
+except IndexError:
+    print "Error: no connection to database, please try again."
+else:
+    print "Shapefile written succesfully."
