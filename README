@@ -1,0 +1,1 @@
+This is some code to obtain place names from a text file and geocode them. After, a shapefile will be created of the locations.

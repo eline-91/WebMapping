@@ -1,1 +1,1 @@
-Wageningen,Amsterdam,Fuji,Lima,Bennekom,Cairo,Sao Paulo,Brisbane,New York
+Wageningen,Amsterdam,Fuji,Lima,Bennekom,Cairo,Sao Paulo,Brisbane,New York,Apeldoorn,Belem,Piracicaba,California,Johannesburg
